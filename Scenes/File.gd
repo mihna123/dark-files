@@ -9,13 +9,13 @@ var sub_files
 var win_scene = load("res://Scenes/Window.tscn")
 var file_scene = load("res://Scenes/File.tscn")
 var text_icon = load("res://art/text_icon.png")
+var file_system_scene = load("res://filesys/file_system.tscn")
 var window	
 var file_num = 0
-var file_list
-var fs_path = "res://filesys/fs.json"
+
 
 func on_open():
-	file_list = parse_json($load_text.load_text(fs_path))
+	var file_list = file_system_scene.instance().files
 	var this_file = file_list[file_id]
 	
 	window = win_scene.instance()

@@ -1,7 +1,7 @@
 extends Node2D
 
 var file_scene = load("res://Scenes/File.tscn")
-var fs_path = "res://filesys/fs.json"
+var file_system_scene = load("res://filesys/file_system.tscn")
 var file_num = 0
 
 
@@ -10,10 +10,8 @@ func _ready():
 	pass
 
 func load_fs():
-	var obj_json = $load_text.load_text(fs_path)
-	var fs_array = parse_json(obj_json)
-	for i in fs_array.size():
-		var file_obj = fs_array[i]
+	var fs_array = file_system_scene.instance().files
+	for file_obj in fs_array:
 		if file_obj.desktop:
 			add_file(file_obj.file_id, file_obj.file_name, file_obj.text_content, file_obj.sub_files)
 
