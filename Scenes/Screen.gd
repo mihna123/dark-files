@@ -1,33 +1,28 @@
 extends Node2D
 
-export(PackedScene) var window_scene
+var file_scene = load("res://Scenes/File.tscn")
+var fs_path = "res://filesys/fs.json"
+var file_num = 0
 
 
 func _ready():
+	load_fs()
 	pass
 
-func _on_PicturesFolder_pressed():
-	var pictures_wnd = window_scene.instance()
-	pictures_wnd.set_title("Pictures")
-	pictures_wnd.position = Vector2(280,200)
-	pictures_wnd.allow_image(load("res://art/wedding1.bmp"))
-	add_child(pictures_wnd)
+func load_fs():
+	var obj_json = $load_text.load_text(fs_path)
+	var fs_array = parse_json(obj_json)
+	for i in fs_array.size():
+		var file_obj = fs_array[i]
+		if file_obj.desktop:
+			add_file(file_obj.file_id, file_obj.file_name, file_obj.text_content, file_obj.sub_files)
 
-
-func _on_DocumetnsFolder_pressed():
-	var doc_wnd = window_scene.instance()
-	doc_wnd.set_title("Documents")
-	doc_wnd.position = Vector2(280,200)
-	add_child(doc_wnd)
-
-
-func _on_textFile_pressed():
-	var text_wnd = window_scene.instance()
-	text_wnd.connect("exited",self,"_on_textWnd_exit")
-	text_wnd.set_title("README.txt")
-	text_wnd.position = Vector2(280,200)
-	text_wnd.allow_text($textFile.contents)
-	add_child(text_wnd)
-
-func _on_textWnd_exit(text):
-	$textFile.contents = text
+func add_file(file_id: int,file_name: String, text_contents: String, subfs: Array):
+	var new_file = file_scene.instance()
+	new_file.file_id = file_id
+	new_file.file_name = file_name
+	new_file.text_contents = text_contents
+	new_file.sub_files = subfs
+	new_file.rect_position = Vector2(30 + (file_num * 80)%(6 * 80), 30 + floor(file_num/6) * 60)
+	add_child(new_file)
+	file_num += 1

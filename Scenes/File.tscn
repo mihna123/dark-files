@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/File.gd" type="Script" id=1]
+[ext_resource path="res://fonts/VT323-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://art/folder_icon.png" type="Texture" id=3]
+[ext_resource path="res://utils/load_text.tscn" type="PackedScene" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 2 )
+
+[node name="File" type="TextureButton"]
+margin_right = 64.0
+margin_bottom = 64.0
+texture_normal = ExtResource( 3 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="RichTextLabel" type="Label" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -4.0
+margin_bottom = 49.0
+custom_colors/font_color = Color( 0.027451, 0.666667, 0.0627451, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Folder"
+align = 1
+
+[node name="load_text" parent="." instance=ExtResource( 4 )]
+
+[connection signal="pressed" from="." to="." method="on_open"]
