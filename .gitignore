@@ -16,3 +16,6 @@ mono_crash.*.json
 
 #Ignore the refferencees file since its not nececary
 refs
+
+#Bin is not needed
+bin
