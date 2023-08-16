@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/Folder.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Screen.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/Window.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/TextFile.tscn" type="PackedScene" id=4]
+[ext_resource path="res://art/wnd_frame.png" type="Texture" id=5]
+
+[node name="Screen" type="Node2D"]
+position = Vector2( 45, 45 )
+script = ExtResource( 2 )
+window_scene = ExtResource( 3 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -88.0
+margin_top = -75.0
+margin_right = 650.0
+margin_bottom = 499.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="PicturesFolder" parent="." instance=ExtResource( 1 )]
+text = "Pictures"
+
+[node name="DocumetnsFolder" parent="." instance=ExtResource( 1 )]
+margin_left = 85.0
+margin_right = 149.0
+text = "Documents"
+
+[node name="textFile" parent="." instance=ExtResource( 4 )]
+margin_left = 170.0
+margin_right = 234.0
+margin_bottom = 64.0
+text = "README.txt"
+
+[node name="wndFrame" type="Sprite" parent="."]
+position = Vector2( 275, 195 )
+texture = ExtResource( 5 )
+
+[connection signal="pressed" from="PicturesFolder" to="." method="_on_PicturesFolder_pressed"]
+[connection signal="pressed" from="DocumetnsFolder" to="." method="_on_DocumetnsFolder_pressed"]
+[connection signal="pressed" from="textFile" to="." method="_on_textFile_pressed"]
