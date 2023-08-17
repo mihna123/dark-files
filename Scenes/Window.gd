@@ -1,8 +1,9 @@
 extends Node2D
 
 signal exited(text)
+signal password_entered
 
-export var title = "Documents"
+var title = "Documents"
 
 var usr_holding = false
 var past_position = Vector2.ZERO
@@ -11,6 +12,8 @@ var text_file = false
 var image_file = false
 var parent_position
 var file_num = 0
+var password = ""
+var pass_wnd
 
 func _ready():
 	screen_size = get_viewport_rect().size
@@ -24,8 +27,8 @@ func _ready():
 	$bopSound.play()
 
 func set_title(text):
-	$RichTextLabel.text = text
-	$RichTextLabel.show()
+	get_node("dragButton/RichTextLabel").text = text
+	#$RichTextLabel.show()
 
 func _process(_delta):
 	if usr_holding:
@@ -44,11 +47,15 @@ func allow_image(image):
 	$Image.texture = image
 	
 func add_file(file):
-	file.rect_position = Vector2((file_num * 80)%(4 * 80), floor(file_num/6) * 60) - (position - Vector2(130,130))
+	file.rect_position = Vector2((file_num * 80)%(4 * 80), floor(file_num/4) * 80) - (position - Vector2(130,130))
 	add_child(file)
 	file_num += 1
 
+func set_password(passw):
+	password = passw
 
+func add_pass_wnd(wnd):
+	pass_wnd = wnd
 
 func _on_xButton_pressed():
 	emit_signal("exited",$Text.text)
@@ -62,3 +69,24 @@ func _on_dragButton_button_down():
 
 func _on_dragButton_button_up():
 	usr_holding = false
+
+
+func _on_OKButton_pressed():
+	var input = $pass.text
+	$pass.text = ""
+	if input == password:
+		$Label.text = "Correct!"
+		$CorrectTimer.start()
+	else:
+		$Label.text = "Wrong! Try again:"
+
+
+func _on_CorrectTimer_timeout():
+	$Label.text = "Decripting file..."
+	$DecriptingTimer.start()
+	
+
+func _on_DecriptingTimer_timeout():
+	var root = get_node("/root")
+	root.add_child(pass_wnd)
+	queue_free()

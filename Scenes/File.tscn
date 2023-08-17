@@ -17,14 +17,18 @@ __meta__ = {
 }
 
 [node name="RichTextLabel" type="Label" parent="."]
+anchor_left = 0.5
 anchor_top = 1.0
-anchor_right = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
+margin_left = -39.0
 margin_top = -4.0
+margin_right = 39.0
 margin_bottom = 49.0
 custom_colors/font_color = Color( 0.027451, 0.666667, 0.0627451, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Folder"
 align = 1
+autowrap = true
 
 [connection signal="pressed" from="." to="." method="on_open"]

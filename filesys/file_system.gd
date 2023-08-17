@@ -3,30 +3,101 @@ extends Node
 var files = [
 	{
 		"file_id":0,
-		"file_name":"for_james.txt",
-		"text_content":"Hey, So... This Is Weird\n\nIf you're reading this, welcome to the confusion party. It's like I'm a puzzle with half the pieces missing. But here's what I could piece together:\n\nName: James Anderson? Yeah, that's what I think I'm called. Hope it's right, or else it's awkward.\n\nFamily: Sarah's name tugs at my brain like a distant memory. And Emily? David? They sound familiar, like forgotten friends.\n\nHome: Maple Street or Willow? Guess there's a house in there somewhere. Hope it's not made of cards.\n\nHobbies: Piano? Apparently, I used to tickle the keys. Books, too? Maybe I was a reader in some past life.\n\nRoutine: Walking, gardening, library. Routine's supposed to help, right? So let's go with that.\n\nClose Friends: Alex, Daniel, Karen... sound like buddies, but my mind's playing hide and seek with their faces.\n\nHealth: Pills to keep the brain on track. Doctor visits for... well, the doctor stuff.\n\nThis Laptop: Found this file, wrote these words. Past me trying to talk to future me, I guess. But am I listening?\n\nEmotions: Fear is my sidekick. Maybe it's pointing at something I'm missing.\n\nThe Journey: Life's like a foggy mirror maze. Gotta find a way out, maybe these words will help.\n\nSo, if this laptop's my compass, these words are my North Star. Good luck to us both.\n\nFumbling through,\n\nYourself",
-		"sub_files":[],
-		"desktop":true
+		"file_name":"Computer",
+		"text_content":"",
+		"sub_files":[3,4,5,6,7],
+		"desktop":true,
+		"password":"",
+		"img":""
 	},
 	{
 		"file_id":1,
-		"file_name":"docs",
-		"text_content":"",
-		"sub_files":[2,3,1],
-		"desktop":true
+		"file_name":"for_james.txt",
+		"text_content":"Hey, So... This Is Weird\n\nIf you're reading this, welcome to the confusion party. It's like I'm a puzzle with half the pieces missing. But here's what I could piece together:\n\nName: James Anderson? Yeah, that's what I think I'm called. Hope it's right, or else it's awkward.\n\nFamily: Sarah's name tugs at my brain like a distant memory. And Emily? David? They sound familiar, like forgotten friends.\n\nHome: Maple Street or Willow? Guess there's a house in there somewhere. Hope it's not made of cards.\n\nHobbies: Piano? Apparently, I used to tickle the keys. Books, too? Maybe I was a reader in some past life.\n\nRoutine: Walking, gardening, library. Routine's supposed to help, right? So let's go with that.\n\nClose Friends: Alex, Daniel, Karen... sound like buddies, but my mind's playing hide and seek with their faces.\n\nHealth: Pills to keep the brain on track. Doctor visits for... well, the doctor stuff.\n\nThis Laptop: Found this file, wrote these words. Past me trying to talk to future me, I guess. But am I listening?\n\nEmotions: Fear is my sidekick. Maybe it's pointing at something I'm missing.\n\nThe Journey: Life's like a foggy mirror maze. Gotta find a way out, maybe these words will help.\n\nSo, if this laptop's my compass, these words are my North Star. Good luck to us both.\n\nFumbling through,\n\nYourself",
+		"sub_files":[],
+		"desktop":true,
+		"password":"",
+		"img":""
 	},
 	{
 		"file_id":2,
-		"file_name":"majmune.txt",
-		"text_content":"Majmuneeeeee",
+		"file_name":"locked.txt",
+		"text_content":"Welcome to the abyss",
 		"sub_files":[],
-		"desktop":false
+		"desktop":true,
+		"password":"1",
+		"img":""
 	},
 	{
 		"file_id":3,
-		"file_name":"porn",
+		"file_name":"Documents",
 		"text_content":"",
-		"sub_files":[2],
-		"desktop":false
+		"sub_files":[],
+		"desktop":false,
+		"password":"",
+		"img":""
+	},
+	{
+		"file_id":4,
+		"file_name":"Downloads",
+		"text_content":"",
+		"sub_files":[],
+		"desktop":false,
+		"password":"",
+		"img":""
+	},
+	{
+		"file_id":5,
+		"file_name":"Pictures",
+		"text_content":"",
+		"sub_files":[],
+		"desktop":false,
+		"password":"",
+		"img":""
+	},
+	{
+		"file_id":6,
+		"file_name":"Mail",
+		"text_content":"",
+		"sub_files":[8,9,10],
+		"desktop":false,
+		"password":"",
+		"img":""
+	},
+	{
+		"file_id":7,
+		"file_name":"Desktop",
+		"text_content":"",
+		"sub_files":[0,1,2],
+		"desktop":false,
+		"password":"",
+		"img":""
+	},
+	{
+		"file_id":8,
+		"file_name":"limited.txt",
+		"text_content":"Subject: Limited-Time Offer: Exclusive Vacation Deals!\nSender: Vacation Paradise Getaways\nDate: 14.10.1992\nHey James,\nWe hope this email finds you well! Looking for a perfect escape? Our team at Vacation Paradise Getaways has curated a selection of exclusive vacation deals just for you. Whether you're seeking a serene beach retreat or an adventurous mountain getaway, we've got the perfect destination waiting for you.\nBeach Bliss: Relax on pristine shores and soak in the sun at our top-rated beach resorts. Unwind with breathtaking ocean views, indulge in spa treatments, and enjoy fine dining experiences.\nMountain Magic: For the adventurous souls, our mountain retreats offer hiking trails, thrilling outdoor activities, and cozy cabins nestled in the heart of nature.\nSpecial Offer: Book now and receive up to 25% off on select vacation packages! Don't miss out on this limited-time opportunity to create unforgettable memories.\nReady to embark on your dream vacation? Simply click the link below to explore our exclusive deals and plan your next adventure.\nwww.exclusivevacation.com/deals\nIf you have any questions or need assistance, our dedicated travel experts are here to help. Contact us at customer@paramail.com or call 0811/2311.\nEscape the everyday and start your journey with Vacation Paradise Getaways!\nBest regards,\nThe Vacation Paradise Getaways Team\nP.S. Stay connected with us on social media for travel tips, destination highlights, and more! Follow us on Instagram @vacationgateawaysus.",
+		"sub_files":[],
+		"desktop":false,
+		"password":"",
+		"img":""
+	},
+	{
+		"file_id":9,
+		"file_name":"exclusive.txt",
+		"text_content":"Subject: Exclusive Piano Recital: An Evening of Melodies\nSender: Harmony Concert Hall\nDate: 02.05.1992\nHello James,\nWe are delighted to extend an exclusive invitation to you for an enchanting piano recital that promises to transport you to a world of harmonious melodies and timeless compositions.\nEvent Details:\nDate: 12.05.1992.\nTime: 18:00\nLocation: Harmony Concert Hall\nDress Code: Cocktail Attire\nJoin us for an unforgettable evening dedicated to the captivating artistry of piano music. Immerse yourself in the soul-stirring performances of internationally acclaimed pianists as they breathe life into classical masterpieces and contemporary interpretations.\nAs a pianist yourself, we believe this event will resonate deeply with your love for music. After the recital, you are invited to join a special meet-and-greet session with the performers, offering a chance to connect with fellow music enthusiasts and artists.\nKindly RSVP by 10.05.1992. to ensure your seat at this extraordinary musical experience. Your presence will undoubtedly enhance the magic of this musical soirée.\n[RSVP Button]\nShould you have any inquiries or require further information, please do not hesitate to reach out to our dedicated event coordinator at notjanedoe@hotmail.com.\nWe eagerly anticipate your presence at this harmonious celebration.\nWarm regards,\nThe Harmony Concert Hall Tea",
+		"sub_files":[],
+		"desktop":false,
+		"password":"",
+		"img":""
+	},
+	{
+		"file_id":10,
+		"file_name":"support.txt",
+		"text_content":"Subject: Upcoming Support Group Meeting: Connecting with Understanding Hearts\nSender: Healing Together Support Group\nDate: 20.11.1992.\nDear James,\n\nWe hope this message finds you well. As we approach our next gathering, we wanted to extend a warm reminder about our upcoming support group meeting.\n\nEvent Details:\nDate: 03.01.1993\nTime: 20:30\nLocation: Serenity Haven Community Center\n\nAt Healing Together Support Group, we understand that the journey toward healing can be challenging. Our meetings provide a safe and nurturing environment for individuals seeking to connect with others who share similar experiences.\n\nSharing stories, thoughts, and emotions can be a powerful step in fostering growth and understanding. Our collective journey is a testament to the strength that comes from unity and mutual support.\n\nPlease feel free to reach out if you have any questions or if there's anything you'd like to discuss before the meeting. Your presence contributes to the sense of community that makes our group so special.\n\nWe look forward to seeing you at the meeting and continuing our journey of healing together.\n\nWarm regards,\nThe Healing Together Support Group Team",
+		"sub_files":[],
+		"desktop":false,
+		"password":"",
+		"img":""
 	}
 ]
