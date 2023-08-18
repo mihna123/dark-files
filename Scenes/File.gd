@@ -2,20 +2,23 @@ extends TextureButton
 
 var file_name = "Text.txt"
 var text_contents = ""
-
 var file_id
 var type = "folder"
 var sub_files
 var password
+var img
+
 var win_scene = load("res://Scenes/Window.tscn")
 var win_pass_scene = load("res://Scenes/Wnd_pass.tscn")
 var file_scene = load("res://Scenes/File.tscn")
 var text_icon = load("res://art/text_icon.png")
 var enc_icon = load("res://art/encripted_icon.png")
 var comp_icon = load("res://art/computer_icon.png")
+var img_icon = load("res://art/img_icon.png")
 var file_system_scene = load("res://filesys/file_system.tscn")
 var window
 var file_num = 0
+
 
 
 func on_open():
@@ -34,10 +37,11 @@ func on_open():
 	if type == "folder":
 		for i in sub_files:
 			var file_obj = file_list[i]
-			var new_file = get_file(file_obj.file_id, file_obj.file_name, file_obj.text_content, file_obj.sub_files, file_obj.password)
+			var new_file = get_file(file_obj.file_id, file_obj.file_name, file_obj.text_content, file_obj.sub_files, file_obj.password, file_obj.img)
 			window.add_file(new_file)
 	elif type == "image":
-		pass
+		var image = load(img)
+		window.allow_image(image)
 	elif type == "text":
 		window.allow_text(text_contents)
 	if password != "":
@@ -60,6 +64,8 @@ func _ready():
 		texture_normal = comp_icon
 	elif type == "text":
 		texture_normal = text_icon
+	elif type == "image":
+		texture_normal = img_icon
 
 func get_file_type(name):
 	var str_name = String(name)
@@ -75,14 +81,12 @@ func get_file_type(name):
 func _on_wnd_close(cont):
 	text_contents = cont
 	
-func get_file(file_id: int,file_name: String, text_contents: String, subfs: Array, password: String):
+func get_file(file_id: int,file_name: String, text_contents: String, subfs: Array, password: String, img: String):
 	var new_file = file_scene.instance()
 	new_file.file_id = file_id
 	new_file.file_name = file_name
 	new_file.text_contents = text_contents
 	new_file.sub_files = subfs
 	new_file.password = password
+	new_file.img = img
 	return new_file
-
-#func add_nested_file(fileName):
-#	nested_files.append(fileName)

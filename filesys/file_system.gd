@@ -21,11 +21,11 @@ var files = [
 	},
 	{
 		"file_id":2,
-		"file_name":"locked.txt",
-		"text_content":"Welcome to the abyss",
-		"sub_files":[],
+		"file_name":"thoughts",
+		"text_content":"",
+		"sub_files":[12],
 		"desktop":true,
-		"password":"1",
+		"password":"",
 		"img":""
 	},
 	{
@@ -50,7 +50,7 @@ var files = [
 		"file_id":5,
 		"file_name":"Pictures",
 		"text_content":"",
-		"sub_files":[],
+		"sub_files":[11],
 		"desktop":false,
 		"password":"",
 		"img":""
@@ -99,5 +99,23 @@ var files = [
 		"desktop":false,
 		"password":"",
 		"img":""
-	}
+	},
+	{
+		"file_id":11,
+		"file_name":"wedding.png",
+		"text_content":"",
+		"sub_files":[],
+		"desktop":false,
+		"password":"",
+		"img":"res://art/wedding.png"
+	},
+	{
+		"file_id":12,
+		"file_name":"unberable_truth.txt",
+		"text_content":"I did something terrible. I can't believe what happened. It was a fight, just a fight like any other, but then it wasn't. Things spiraled out of control so fast, I couldn't even catch my breath.\n\nI didn't mean for it to happen. I didn't want any of this. She was everything to me, my rock, my love, and now she's gone. How did things get so messed up?\n\nI can't shake the image from my head—the look in her eyes, the fear, the pain. I never meant to hurt her. I swear it. But I did, and now I'm living with this nightmare that won't go away.\n\nI don't know how to go on from here. I can't undo what's been done. There's so much I wish I could tell her now, so much I wish I could take back.\n\nI don't even know if I can forgive myself. How could I let my anger get the best of me? How could I let things get this far?\n\nI don't know if anyone will ever read this. Maybe I'm just shouting into the void, trying to find some kind of release from the guilt that's eating me alive. I just needed to put it down somewhere, to admit what I've done.\n\nI'm so scared. Scared of the consequences, scared of what this means for me, scared of what it means for her. I wish I could turn back time, fix everything, but I can't.\n\nI'm sorry, Sarah. I'm so, so sorry.",
+		"sub_files":[],
+		"desktop":false,
+		"password":"1",
+		"img":""
+	},
 ]

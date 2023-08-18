@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/wedding1.bmp-7205d76c2c1b71f55863f3a65173c524.stex"
+path="res://.import/wedding.png-6534a5892d2ffbee4d31d4b9cdc5fe72.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://refs/wedding1.bmp"
-dest_files=[ "res://.import/wedding1.bmp-7205d76c2c1b71f55863f3a65173c524.stex" ]
+source_file="res://art/wedding.png"
+dest_files=[ "res://.import/wedding.png-6534a5892d2ffbee4d31d4b9cdc5fe72.stex" ]
 
 [params]
 
