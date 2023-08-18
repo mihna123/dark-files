@@ -47,7 +47,7 @@ func allow_image(image):
 	$Image.texture = image
 	
 func add_file(file):
-	file.rect_position = Vector2((file_num * 80)%(4 * 80), floor(file_num/4) * 80) - (position - Vector2(130,130))
+	file.rect_position = Vector2((file_num * 80)%(4 * 80), floor(file_num/4) * 100) - (position - Vector2(130,130))
 	add_child(file)
 	file_num += 1
 
