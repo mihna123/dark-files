@@ -72,16 +72,20 @@ func _on_dragButton_button_up():
 
 
 func _on_OKButton_pressed():
+	print("pressed ok button")
 	var input = $pass.text
 	$pass.text = ""
 	if input == password:
+		print("input is correct")
 		$Label.text = "Correct!"
+		print("starting correct timer")
 		$CorrectTimer.start()
 	else:
 		$Label.text = "Wrong! Try again:"
 
 
 func _on_CorrectTimer_timeout():
+	print("correct timer timeot")
 	$Label.text = "Decripting file..."
 	$DecriptingTimer.start()
 	
