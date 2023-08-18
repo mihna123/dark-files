@@ -308,13 +308,4 @@ var files = [
 		"password":"1234",
 		"img":"res://art/dead.png"
 	},
-	{
-		"file_id":34,
-		"file_name":"test",
-		"text_content":"",
-		"sub_files":[],
-		"desktop":true,
-		"password":"1",
-		"img":""
-	},
 ]

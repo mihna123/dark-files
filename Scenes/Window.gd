@@ -36,6 +36,7 @@ func _process(_delta):
 		position = mouse_pos + past_position
 		position.x = clamp(position.x, 0 - parent_position.x, screen_size.x - parent_position.x)
 		position.y = clamp(position.y, 150 - parent_position.y , screen_size.y - parent_position.y)
+
 	
 func allow_text(text):
 	text_file = true
@@ -76,21 +77,7 @@ func _on_OKButton_pressed():
 	var input = $pass.text
 	$pass.text = ""
 	if input == password:
-		print("input is correct")
-		$Label.text = "Correct!"
-		print("starting correct timer")
-		$CorrectTimer.start()
-	else:
-		$Label.text = "Wrong! Try again:"
+		var root = get_node("/root")
+		root.add_child(pass_wnd)
+		queue_free()
 
-
-func _on_CorrectTimer_timeout():
-	print("correct timer timeot")
-	$Label.text = "Decripting file..."
-	$DecriptingTimer.start()
-	
-
-func _on_DecriptingTimer_timeout():
-	var root = get_node("/root")
-	root.add_child(pass_wnd)
-	queue_free()

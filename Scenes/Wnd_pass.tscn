@@ -104,12 +104,4 @@ custom_fonts/font = SubResource( 3 )
 text = "OK"
 align = 1
 
-[node name="DecriptingTimer" type="Timer" parent="." index="12"]
-one_shot = true
-
-[node name="CorrectTimer" type="Timer" parent="." index="13"]
-one_shot = true
-
 [connection signal="pressed" from="OKButton" to="." method="_on_OKButton_pressed"]
-[connection signal="timeout" from="DecriptingTimer" to="." method="_on_DecriptingTimer_timeout"]
-[connection signal="timeout" from="CorrectTimer" to="." method="_on_CorrectTimer_timeout"]
